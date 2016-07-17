@@ -13,7 +13,6 @@ def HashLoop(binary):
     result = ""
     for i in range(0, len(binary), 2):
         try:
-            #result = result + (int(source[i], 2) % int(source[i + 1], 2))
             result = result + str(MAPS(int(binary[i], 2),int(binary[i + 1], 2)))
         except ZeroDivisionError:
             print("zero error")
@@ -23,9 +22,8 @@ def HashLoop(binary):
 
 def hash(source):
     result = HashLoop(source)
-    print (result)
-
-    while len(result) > 1:
-        #print (len(result))
+    while len(intToBinary.convert(result)) > 1:
+        print("len " + str(len(intToBinary.convert(result))))
         result = HashLoop(intToBinary.convert(result))
-        print (result)
+        print("res " + str(result))
+    print("Result of the hash was: " + result)
