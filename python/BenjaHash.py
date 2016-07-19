@@ -22,8 +22,11 @@ def HashLoop(binary):
 
 def hash(source):
     result = HashLoop(source)
-    while len(convert.intToBinary(result)) > 1:
-        print("len " + str(len(convert.intToBinary(result))))
-        result = HashLoop(convert.intToBinary(result))
-        print("res " + str(result))
+    if type(result) is str:
+        while len(convert.intToBinary(result)) > 1:
+            print("len " + str(len(convert.intToBinary(result))))
+            result = HashLoop(convert.intToBinary(result))
+            print("res " + str(result))
+    else:
+        result = "0"
     print("Result of the hash was: " + result)
