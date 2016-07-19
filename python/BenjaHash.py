@@ -18,15 +18,16 @@ def HashLoop(binary):
             print("zero error")
         except IndexError:
             print("index error")
+    if len(result) < 1:
+        result = "0"
     return(result)
 
 def hash(source):
     result = HashLoop(source)
-    if type(result) is str:
-        while len(convert.intToBinary(result)) > 1:
-            print("len " + str(len(convert.intToBinary(result))))
-            result = HashLoop(convert.intToBinary(result))
-            print("res " + str(result))
-    else:
-        result = "0"
+
+    while len(convert.intToBinary(result)) > 1:
+        print("len " + str(len(convert.intToBinary(result))))
+        result = HashLoop(convert.intToBinary(result))
+        print("res " + str(result))
+
     print("Result of the hash was: " + result)
