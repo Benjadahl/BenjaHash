@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import intToBinary
+import convert
 
 #Modulus_Always_PoSitive
 def MAPS(value1, value2):
@@ -22,8 +22,8 @@ def HashLoop(binary):
 
 def hash(source):
     result = HashLoop(source)
-    while len(intToBinary.convert(result)) > 1:
-        print("len " + str(len(intToBinary.convert(result))))
-        result = HashLoop(intToBinary.convert(result))
+    while len(convert.intToBinary(result)) > 1:
+        print("len " + str(len(convert.intToBinary(result))))
+        result = HashLoop(convert.intToBinary(result))
         print("res " + str(result))
     print("Result of the hash was: " + result)
