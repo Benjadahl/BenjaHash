@@ -10,7 +10,10 @@ if __name__ == '__main__':
 
     if sys.argv[1] == "int":
         source = convert.intToBinary(sys.argv[2])
-        BenjaHash.hash(source)
+        hashResult = BenjaHash.hash(source)
 
     if sys.argv[1] == "bin":
-        BenjaHash.hash(convert.binToArray(sys.argv[2]))
+        source = convert.binToArray(sys.argv[2])
+        hashResult = BenjaHash.hash(source)
+
+    print("The result of the hash was: " + str(hashResult))

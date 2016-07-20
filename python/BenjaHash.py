@@ -15,20 +15,19 @@ def HashLoop(binary):
         try:
             result = result + str(MAPS(int(binary[i], 2),int(binary[i + 1], 2)))
         except ZeroDivisionError:
-            print("zero error")
+            #Do nothing if a division by zero error appears
+            pass
         except IndexError:
-            print("index error")
+            #Do nothing if an index error appears
+            pass
     if len(result) < 1:
         result = "0"
     return(result)
 
 def hash(source):
-    print(source[1])
     result = HashLoop(source)
 
     while len(convert.intToBinary(result)) > 1:
-        print("len " + str(len(convert.intToBinary(result))))
         result = HashLoop(convert.intToBinary(result))
-        print("res " + str(result))
 
-    print("Result of the hash was: " + result)
+    return int(result)
