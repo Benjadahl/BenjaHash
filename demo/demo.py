@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 import sys
-import BenjaHash
 import convert
+#Changes the python importer focus to parent folder
+sys.path.insert(0, "../")
+import BenjaHash
 
 if __name__ == '__main__':
     if sys.argv[1] == "string":
