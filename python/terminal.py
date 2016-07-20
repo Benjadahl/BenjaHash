@@ -13,4 +13,4 @@ if __name__ == '__main__':
         BenjaHash.hash(source)
 
     if sys.argv[1] == "bin":
-        BenjaHash.hash(str(convert.binToArray(sys.argv[2])))
+        BenjaHash.hash(convert.binToArray(sys.argv[2]))

@@ -23,6 +23,7 @@ def HashLoop(binary):
     return(result)
 
 def hash(source):
+    print(source[1])
     result = HashLoop(source)
 
     while len(convert.intToBinary(result)) > 1:
