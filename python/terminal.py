@@ -17,8 +17,10 @@ if __name__ == '__main__':
         hashResult = BenjaHash.hash(source)
 
     if sys.argv[1] == "str":
+        print(" ")
+        print("*** Beware that no spaces are allowed in your string, due to the nature of system arguments ***")
+        print(" ")
         source = convert.strToBinary(sys.argv[2])
         hashResult = BenjaHash.hash(source)
-        print(source)
 
     print("The result of the hash was: " + str(hashResult))
