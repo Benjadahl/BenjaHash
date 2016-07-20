@@ -16,4 +16,9 @@ if __name__ == '__main__':
         source = convert.binToArray(sys.argv[2])
         hashResult = BenjaHash.hash(source)
 
+    if sys.argv[1] == "str":
+        source = convert.strToBinary(sys.argv[2])
+        hashResult = BenjaHash.hash(source)
+        print(source)
+
     print("The result of the hash was: " + str(hashResult))
