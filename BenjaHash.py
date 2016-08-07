@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import convert
+import BenjaConvert
 
 #Modulus_Always_PoSitive
 def MAPS(value1, value2):
@@ -27,7 +27,7 @@ def HashLoop(binary):
 def hash(source):
     result = HashLoop(source)
 
-    while len(convert.intToBinary(result)) > 1:
-        result = HashLoop(convert.intToBinary(result))
+    while len(BenjaConvert.intToBinary(result)) > 1:
+        result = HashLoop(BenjaConvert.intToBinary(result))
 
     return int(result)
